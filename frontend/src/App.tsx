@@ -8,7 +8,7 @@ import EventDetails from "./pages/EventDetails";
 import TicketPurchase from "./components/TicketPurchase";
 import Testimonials from "./pages/Testimonials";
 import Chatbit from "./pages/Chatbit";
-import Footer from "./components/Footer"; // Updated import path for Footer
+import Footer from "./components/Footer";
 import Qrcode from "./pages/Qrcode";
 import Ticketsell from "./pages/Ticketsell"
 const App = () => {
