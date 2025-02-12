@@ -30,30 +30,24 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 
 ### Languages & Frameworks
 
-
-### Languages & Frameworks
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 ### Blockchain
+
 ![Avalanche](https://img.shields.io/badge/Avalanche-E84142?style=for-the-badge&logo=avalanche&logoColor=white)
 ![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
 
 ### Development Tools
+
 ![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
 ![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-4E5EE4?style=for-the-badge&logo=OpenZeppelin&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 
-
-
-
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-
-
 
 1. **Clone the repository:**
 
@@ -104,28 +98,26 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 
 ### 🌐 Waitlist Landing Page Integration
 
-<img width="945" alt="Screenshot 2025-01-21 151558" src="https://github.com/user-attachments/assets/36aff1b1-6c2f-476d-b0ea-8729c0a52148" />
+![Screenshot 2025-01-21 151558](https://github.com/user-attachments/assets/36aff1b1-6c2f-476d-b0ea-8729c0a52148)
 
-
-#### Key Deliverables:
+#### Key Deliverables
 
 1. **Landing Page Design**
 
-   <img width="948" alt="Screenshot 2025-01-21 151517" src="https://github.com/user-attachments/assets/786b0fb1-92c5-4433-89bd-6c7282ea8e69" />
+   ![Screenshot 2025-01-21 151517](https://github.com/user-attachments/assets/786b0fb1-92c5-4433-89bd-6c7282ea8e69)
 
 2. **Tickets collection**
-   <img width="950" alt="Screenshot 2025-01-21 161518" src="https://github.com/user-attachments/assets/cd58022e-d42d-4327-b3f6-ec45d496d4d8" />
-   
+   ![Screenshot 2025-01-21 161518](https://github.com/user-attachments/assets/cd58022e-d42d-4327-b3f6-ec45d496d4d8)
+
 3. **Ticket sales**
 
- <img width="960" alt="Screenshot 2025-01-21 151643" src="https://github.com/user-attachments/assets/a222522c-71fc-47df-b6f0-a775ed58cd11" />
+![Screenshot 2025-01-21 151643](https://github.com/user-attachments/assets/a222522c-71fc-47df-b6f0-a775ed58cd11)
 
-4. **Ticket Minting**
-   <img width="959" alt="Screenshot 2025-01-21 151623" src="https://github.com/user-attachments/assets/f773d40b-760f-4021-aaf0-0ea4d87e677e" />
+3. **Ticket Minting**
+   ![Screenshot 2025-01-21 151623](https://github.com/user-attachments/assets/f773d40b-760f-4021-aaf0-0ea4d87e677e)
 
 4. **QR code Intergration**
-   <img width="947" alt="Screenshot 2025-01-21 162251" src="https://github.com/user-attachments/assets/99520049-8a10-4ae3-b538-2e6b0bc5df7b" />
-
+   ![Screenshot 2025-01-21 162251](https://github.com/user-attachments/assets/99520049-8a10-4ae3-b538-2e6b0bc5df7b)
 
 5. **Go Live!**
 
@@ -138,8 +130,8 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 - **Speed & Efficiency:** Lightning-fast finality for instant ticket transfers within 2 seconds.
 - **Low Costs:** Affordable transactions for users and event organizers.
 - **💰 Cost Efficiency**
-   - Minimal transaction fees
-   - Economical for both users and operators
+  - Minimal transaction fees
+  - Economical for both users and operators
 
 ### 🔗 Deployment Strategy
 
@@ -151,7 +143,7 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 Eventverse is redefining event ticketing by combining blockchain security with intuitive user experiences. Stay tuned for exciting updates and new features as we shape the future of event access!
 
 ## 📊 Project Status
+
 ![Development Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 ![Build Status](https://img.shields.io/badge/Build-Passing-success?style=for-the-badge)
 ![Test Coverage](https://img.shields.io/badge/Coverage-85%25-green?style=for-the-badge)
-
