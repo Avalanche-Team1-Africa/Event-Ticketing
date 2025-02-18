@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['@chakra-ui/react'],
+    include: ['@chakra-ui/react', 'ethers'],
   },
 });

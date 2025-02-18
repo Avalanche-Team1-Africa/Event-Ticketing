@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "jsx": "react",
+      "esModuleInterop": true
+    },
+    "include": [
+      "src/**/*",
+      "types/global.d.ts"
+    ], 
+
+    "typeRoots": [
+    "./types",
+    "./node_modules/@types"
+  ]
+  }
+  

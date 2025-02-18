@@ -1,33 +1,8 @@
-"use client"
-
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { ethers } from "ethers"
 import { Wallet, Loader2, AlertCircle, Tag, ShoppingCart } from "lucide-react"
+import React from 'react';
 
-declare global {
-  interface Window {
-    ethereum?: {
-      isMetaMask?: boolean
-      request: (request: { method: string; params?: any[] }) => Promise<any>
-      on: (event: string, callback: (...args: any[]) => void) => void
-      removeListener: (event: string, callback: (...args: any[]) => void) => void
-    }
-  }
-}
-
-interface Ticket {
-  tokenId: string
-  owner: string
-  isForSale: boolean
-  price: bigint
-}
-
-interface ResaleListing {
-  tokenId: string
-  owner: string
-  isForSale: boolean
-  price: bigint
-}
 
 const CONTRACT_ADDRESS = "0x256ff3b9d3df415a05ba42beb5f186c28e103b2a"
 const CONTRACT_ABI = [
@@ -45,9 +20,9 @@ const QuantumTicketResale = () => {
   const [walletAddress, setWalletAddress] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [userTickets, setUserTickets] = useState<Ticket[]>([])
-  const [resaleListings, setResaleListings] = useState<ResaleListing[]>([])
-  const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null)
+  const [userTickets, setUserTickets] = useState<any[]>([])
+  const [resaleListings, setResaleListings] = useState<any[]>([])
+  const [selectedTicket, setSelectedTicket] = useState<any>(null)
   const [resalePrice, setResalePrice] = useState("")
   const [activeTab, setActiveTab] = useState("resell")
 
@@ -130,7 +105,7 @@ const QuantumTicketResale = () => {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider)
 
       const balance = await contract.balanceOf(walletAddress)
-      const tickets: Ticket[] = []
+      const tickets = []
 
       for (let i = 0; i < balance; i++) {
         const tokenId = await contract.tokenOfOwnerByIndex(walletAddress, i)
@@ -155,7 +130,7 @@ const QuantumTicketResale = () => {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider)
 
       const totalSupply = await contract.totalSupply()
-      const listings: ResaleListing[] = []
+      const listings = []
 
       for (let i = 0; i < totalSupply; i++) {
         const details = await contract.getTicketDetails(i)
@@ -194,15 +169,15 @@ const QuantumTicketResale = () => {
       await updateResaleListings()
 
       alert("Ticket listed for resale successfully!")
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error listing ticket for resale:", error)
-      setError((error as Error).message || "Failed to list ticket for resale. Please try again.")
+      setError(error.message || "Failed to list ticket for resale. Please try again.")
     } finally {
       setIsLoading(false)
     }
   }
 
-  const handleBuyResaleTicket = async (tokenId: string, price: bigint) => {
+  const handleBuyResaleTicket = async (tokenId: string, price: ethers.BigNumberish) => {
     try {
       setIsLoading(true)
       setError(null)
@@ -218,9 +193,9 @@ const QuantumTicketResale = () => {
       await updateResaleListings()
 
       alert("Resale ticket purchased successfully!")
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error buying resale ticket:", error)
-      setError((error as Error).message || "Failed to buy resale ticket. Please try again.")
+      setError(error.message || "Failed to buy resale ticket. Please try again.")
     } finally {
       setIsLoading(false)
     }
@@ -251,6 +226,30 @@ const QuantumTicketResale = () => {
       </div>
 
       <main className="relative pt-10 sm:pt-20 px-4 sm:px-6">
+        <div className="absolute top-4 right-4">
+          {!isWalletConnected ? (
+            <button
+              onClick={connectWallet}
+              disabled={isLoading}
+              className="px-3 py-2 text-sm rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 
+                hover:from-purple-500 hover:to-blue-500 transition-colors duration-300 flex items-center justify-center space-x-2"
+            >
+              {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Wallet className="w-4 h-4" />}
+              <span>{isLoading ? "Connecting..." : "Connect"}</span>
+            </button>
+          ) : (
+            <div className="flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 rounded-lg p-2">
+              <Wallet className="w-4 h-4 text-purple-400" />
+              <span className="text-sm">{formatAddress(walletAddress)}</span>
+              <button
+                className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
+                onClick={() => setIsWalletConnected(false)}
+              >
+                Disconnect
+              </button>
+            </div>
+          )}
+        </div>
         <div className="max-w-6xl mx-auto">
           <div
             className={`text-center mb-16 transition-all duration-1000 
@@ -293,41 +292,6 @@ const QuantumTicketResale = () => {
               </button>
             </div>
           </div>
-
-          {!isWalletConnected ? (
-            <button
-              onClick={connectWallet}
-              disabled={isLoading}
-              className="w-full group relative px-4 sm:px-6 py-3 sm:py-4 rounded-xl overflow-hidden mb-4 sm:mb-6"
-            >
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 
-                  group-hover:from-purple-500 group-hover:to-blue-500 transition-colors duration-300"
-              />
-              <div className="relative z-10 flex items-center justify-center space-x-2">
-                {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Wallet className="w-5 h-5" />}
-                <span>{isLoading ? "Connecting..." : "Connect Wallet"}</span>
-              </div>
-            </button>
-          ) : (
-            <div className="mb-6">
-              <div
-                className="flex items-center justify-between p-4 rounded-xl bg-purple-500/10 
-                  border border-purple-500/30"
-              >
-                <div className="flex items-center space-x-2">
-                  <Wallet className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm">{formatAddress(walletAddress)}</span>
-                </div>
-                <button
-                  className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                  onClick={() => setIsWalletConnected(false)}
-                >
-                  Disconnect
-                </button>
-              </div>
-            </div>
-          )}
 
           {activeTab === "resell" && (
             <div className="bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-8">
@@ -424,5 +388,4 @@ const QuantumTicketResale = () => {
 }
 
 export default QuantumTicketResale
-
 
