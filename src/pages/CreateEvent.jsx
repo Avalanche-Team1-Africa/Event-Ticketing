@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import Chatbit from './Chatbit';
 
@@ -56,7 +56,7 @@ const CreateEvent = () => {
       }
     };
     init();
-  }, []);
+  }, [provider]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

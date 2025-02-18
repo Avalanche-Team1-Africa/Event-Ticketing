@@ -88,11 +88,11 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 
 | Name                 | Role               | Contact                                                          |
 | -------------------- | ------------------ | ---------------------------------------------------------------- |
-| Brandistone Nyabonyi | Frontend Developer | [brandistone@example.com](mailto\:brandistone@example.com)       |
-| Williams Ochieng     | Smart Contract Dev | [williams@example.com](mailto\:williams@example.com)             |
-| John Mokaya          | Frontend Developer | [johnmokaya@example.com](mailto\:johnmokaya@example.com)         |
-| Stanley Kariuki      | Smart Contract Dev | [stanleykariuki@example.com](mailto\:stanleykariuki@example.com) |
-| Phelix               | Backend Developer  | [phelix@example.com](mailto\:phelix@example.com)                 |
+| Brandistone Nyabonyi | Frontend Developer | [brandistone@example.com](mailto:brandistone@example.com)       |
+| Williams Ochieng     | Smart Contract Dev | [williams@example.com](mailto:williams@example.com)             |
+| John Mokaya          | Frontend Developer | [johnmokaya@example.com](mailto:johnmokaya@example.com)         |
+| Stanley Kariuki      | Smart Contract Dev | [stanleykariuki@example.com](mailto:stanleykariuki@example.com) |
+| Phelix               | Backend Developer  | [phelix@example.com](mailto:phelix@example.com)                 |
 
 ## 📈 Project Milestones
 
@@ -113,13 +113,13 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 
 ![Screenshot 2025-01-21 151643](https://github.com/user-attachments/assets/a222522c-71fc-47df-b6f0-a775ed58cd11)
 
-3. **Ticket Minting**
+4. **Ticket Minting**
    ![Screenshot 2025-01-21 151623](https://github.com/user-attachments/assets/f773d40b-760f-4021-aaf0-0ea4d87e677e)
 
-4. **QR code Intergration**
+5. **QR code Intergration**
    ![Screenshot 2025-01-21 162251](https://github.com/user-attachments/assets/99520049-8a10-4ae3-b538-2e6b0bc5df7b)
 
-5. **Go Live!**
+6. **Go Live!**
 
    - Promote the page across social media and mailing lists.
 
