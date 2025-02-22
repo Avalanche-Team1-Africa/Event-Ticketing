@@ -9,9 +9,9 @@ const FAQ = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
+  }, [setIsLoaded]);
 
-  const handleMouseMove = (e, index) => {
+  const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
