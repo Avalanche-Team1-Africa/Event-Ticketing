@@ -16,9 +16,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@chakra-ui/react', 'ethers'],
   },
-  esbuild: {
-    supported: {
-      'streaming-sse': false,
-    }
-  }
 });
