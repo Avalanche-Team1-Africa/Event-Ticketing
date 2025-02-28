@@ -1,7 +1,7 @@
-const { buildModule } = "@nomicfoundation/hardhat-ignition";
-const { expect } = "chai";
-const { ethers, hre } = "hardhat";
-const { describe, it, beforeEach } = "mocha";
+import { describe, it, beforeEach } from "mocha";
+import { ethers, hre } from "hardhat";
+import { buildModule } from "@nomicfoundation/hardhat-ignition";
+import { expect } from "chai";
 
 describe("Ticket Contract", function () {
     let ticketContract;
