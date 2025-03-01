@@ -14,10 +14,4 @@
       "src/**/*",
       "types/global.d.ts"
     ], 
-
-    "typeRoots": [
-    "./types",
-    "./node_modules/@types"
-  ]
-  }
-  
+}

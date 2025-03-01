@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import imImage from "../assets/im.png";
+import imImage from "../../assets/im.png";
 import Chatbit from './Chatbit';
 import { 
   Ticket, 

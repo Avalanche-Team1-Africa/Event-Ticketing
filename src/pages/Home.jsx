@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Moon, Ticket, Calendar, Users, TrendingUp, ChevronRight, Star, Zap, Activity, Globe, Power } from 'lucide-react';
-import bitcoinImage from "../assets/tig.png"; 
+import bitcoinImage from "../../assets/tig.png"; 
 import Chatbit from './Chatbit';
 import Testimonials from './Testimonials';
 import Discover from './Discover';
@@ -83,7 +83,7 @@ const AnimatedCard = ({ children, delay, onClick, isSelected }) => {
   );
 };
 
-const UltimateEventPlatform = () => {
+const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedFeature, setSelectedFeature] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -445,4 +445,4 @@ const UltimateEventPlatform = () => {
   );
 };
 
-export default UltimateEventPlatform;
+export default Home;

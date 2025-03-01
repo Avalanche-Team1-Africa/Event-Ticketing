@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { ethers } from "ethers"
 import { Wallet, Loader2, AlertCircle, Tag, ShoppingCart } from "lucide-react"
-import React from 'react';
 
 
 const CONTRACT_ADDRESS = "0x256ff3b9d3df415a05ba42beb5f186c28e103b2a"
@@ -101,7 +100,7 @@ const QuantumTicketResale = () => {
     if (!isWalletConnected) return
 
     try {
-      const provider = new ethers.BrowserProvider(window.ethereum!)
+      const provider = new ethers.BrowserProvider(window.ethereum)
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider)
 
       const balance = await contract.balanceOf(walletAddress)
@@ -126,7 +125,7 @@ const QuantumTicketResale = () => {
 
   const updateResaleListings = async () => {
     try {
-      const provider = new ethers.BrowserProvider(window.ethereum!)
+      const provider = new ethers.BrowserProvider(window.ethereum)
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider)
 
       const totalSupply = await contract.totalSupply()
@@ -157,7 +156,7 @@ const QuantumTicketResale = () => {
       setIsLoading(true)
       setError(null)
 
-      const provider = new ethers.BrowserProvider(window.ethereum!)
+      const provider = new ethers.BrowserProvider(window.ethereum)
       const signer = await provider.getSigner()
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
 
@@ -182,7 +181,7 @@ const QuantumTicketResale = () => {
       setIsLoading(true)
       setError(null)
 
-      const provider = new ethers.BrowserProvider(window.ethereum!)
+      const provider = new ethers.BrowserProvider(window.ethereum)
       const signer = await provider.getSigner()
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
 
@@ -267,7 +266,7 @@ const QuantumTicketResale = () => {
           </div>
 
           <div className="flex justify-center mb-8 flex-wrap">
-            <div className="inline-flex rounded-md shadow-sm flex-wrap justify-center" role="group">
+            <fieldset className="inline-flex rounded-md shadow-sm flex-wrap justify-center">
               <button
                 type="button"
                 onClick={() => setActiveTab("resell")}
@@ -290,7 +289,7 @@ const QuantumTicketResale = () => {
               >
                 Buy Resale Ticket
               </button>
-            </div>
+            </fieldset>
           </div>
 
           {activeTab === "resell" && (
