@@ -64,7 +64,7 @@ Eventverse is a revolutionary blockchain-based ticketing platform engineered to 
 3. **Compile smart contracts:**
 
    ```bash
-   npx hardhat compile
+   npx hardhat compile.
    ```
 
 4. **Configure Avalanche network:**
